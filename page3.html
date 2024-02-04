@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Your Personal Trainer</title>
+    <style>
+        body {
+            font-family: 'Permanent Marker', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('image3.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            position: relative;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3em;
+            color: #ffcc00;
+        }
+
+        .container,
+        #about,
+        section,
+        #gallery,
+        #contact,
+        footer {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        #about img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2em;
+        }
+
+        p,
+        li,
+        a {
+            line-height: 1.5;
+            font-size: 1.1em;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        section#contact a {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+        /* Add a translucent background to cover the entire page */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <section>
+            <h2>Services and Prices</h2>
+            <ul>
+                <li>In-person training and online coaching includes: unlimited access to the training app, custom-built workout programs, one or two in-person coaching sessions per week.</li>
+                <li>In-person training: $50 per session or $250 a month (2 in-person per week)</li>
+                <li>Online training: $200 a month</li>
+                <li>Nutrition coaching: includes meal planning and suggestions, coaching, and access to a nutrition tracking app, which will give you a library of workouts to choose from (no workout program, just a library).
+                    Nutrition coaching (only) $150 a month.</li>
+                <li>Behavioral Health coaching: includes an interview, behavioral modification, habit-building exercises, goal setting, and self-development programs.
+                    Health coaching (only) $125 a month.</li>
+                <li>As a training program add-on: $75 a month</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Reach out to me for inquiries or to schedule a session:</p>
+            <p>Email: add link here for Darvin's email</p>
+            <a href="tel:5555555555" style="font-size: 1.5em;">Call me at: 555-555-5555</a>
+            <a href="https://www.facebook.com/darvin.carter" style="font-size: 1.5em;">Personal Facebook</a>
+            <a href="https://www.facebook.com/profile.php?id=61555433211638" style="font-size: 1.5em;">AbleBody Facebook</a>
+            <a href="http://example.com" style="font-size: 1.5em;">Google Drive Link</a>
+            <a href="http://example.com" style="font-size: 1.5em;"></a> <!-- Empty href link with no text -->
+        </section>
+    </div>
+
+    <footer>
+        <a href="page1.html">Home</a>
+        <a href="page2.html">Bio</a>
+        &copy; 2024 Your Personal Trainer
+    </footer>
+
+</body>
+
+</html>
