@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darvin Carter - AutoBody Transformations</title>
+    <meta name="description" content="Darvin Carter's AbleBody Transformations - Fitness and health plans for a better you.">
+    <title>Darvin Carter - AbleBody Transformations</title> <!-- Corrected the title -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -20,117 +21,164 @@
             background-attachment: fixed;
             color: #fff;
             display: flex;
-            flex-direction: column;
             min-height: 100vh;
         }
 
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            text-align: left;
-            width: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            height: 100%;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            transition: 0.3s;
+            z-index: 1;
         }
 
-        header * {
-            font-family: 'Black Ops One', sans-serif;
+        .sidebar.active {
+            left: 0; /* Slide in when active */
         }
 
-        header a {
-            color: red;
+        /* Sidebar links styling */
+        .sidebar a {
+            color: #ff00ff; /* Neon purple */
             text-decoration: none;
-            margin: 0 10px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #e600e6; /* Darker purple on hover */
+        }
+
+        /* Close button inside the sidebar */
+        .sidebar .close-btn {
             font-size: 1.2em;
-        }
-
-        header h1 {
-            font-size: 4em;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            display: flex;
-            flex: 1;
-        }
-
-        section {
-            flex: 1;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            color: #000;
-            margin: 10px;
-        }
-
-        h1,
-        h2 {
-            color: #fff;
-            font-family: 'Black Ops One', sans-serif;
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        p {
-            line-height: 1.6;
-            font-size: 1.8em;
+            color: #ff00ff;
+            background: none;
+            border: none;
+            cursor: pointer;
             margin-bottom: 20px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* Main content area */
+        .main-content {
+            margin-left: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            color: #fff;
         }
 
-        li {
-            margin-bottom: 15px;
-            font-size: 1.8em;
+        /* Header text styling */
+        .main-content p {
+            font-size: 2.5em;
+            color: #ff00ff; /* Neon purple for "AbleBody Transformations" */
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+            margin-bottom: 30px;
+        }
+
+        /* Image styling */
+        .main-content img {
+            width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Hamburger button */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            color: #ff00ff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Hide the button when sidebar is active */
+        .menu-btn.hidden {
+            display: none;
         }
 
         footer {
-            text-align: center;
+            text-align: center; /* Centers the text */
             padding: 15px;
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             margin-top: auto;
-            width: 100%;
+            width: 100%; /* Ensure it spans the full width */
             box-sizing: border-box;
+            display: flex;
+            justify-content: center; /* Ensures that all elements inside the footer are centered */
         }
 
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
+            /* Sidebar responsiveness */
+            .sidebar {
+                width: 100%;
+                left: -100%; /* Hidden by default */
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main-content img {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Darvin Carter</h1>
-        <p>AbleBody Transformations</p>
+
+    <!-- Hamburger button to toggle sidebar -->
+    <button class="menu-btn" id="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+    <!-- Left sidebar with links and close button -->
+    <div class="sidebar" id="sidebar">
+        <!-- Close button -->
+        <button class="close-btn" onclick="toggleSidebar()">Close &times;</button>
         <a href="page2.html">My story and reason...</a>
         <a href="page3.html">Plans and Prices...</a>
-    </header>
+    </div>
 
-    <!-- Add your content sections here -->
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Image with fixed size -->
+        <img src="image6.jpeg" alt="Darvin Carter Logo">
+        <!-- Neon purple "AbleBody Transformations" -->
+        <p>AbleBody Transformations</p>
+    </div>
 
+    <!-- Footer -->
     <footer>
         &copy; 2024 Darvin Carter - AbleBody Transformations
     </footer>
+
+    <!-- JavaScript to toggle sidebar visibility -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menu-btn');
+            sidebar.classList.toggle('active');
+            menuBtn.classList.toggle('hidden');
+        }
+    </script>
+
 </body>
 
 </html>

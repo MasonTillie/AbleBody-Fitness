@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Your Personal Trainer</title>
     <style>
         body {
@@ -88,7 +89,7 @@
             display: block;
             margin-bottom: 20px;
             font-size: 1.5em;
-            color: #fff;
+            color: #ff00ff;
         }
 
         footer {
@@ -100,7 +101,7 @@
         }
 
         footer a {
-            color: #fff;
+            color: #ff00ff;
             text-decoration: none;
             font-family: 'Permanent Marker', cursive;
             font-size: 1.5em;
@@ -118,6 +119,40 @@
             background-color: rgba(0, 0, 0, 0.4);
             z-index: -1;
         }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff00ff;
+        }
+
+        .social-label {
+            font-size: 1.2em;
+            margin-left: 10px;
+            vertical-align: middle;
+            color: #fff;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container section {
+                padding: 10px;
+            }
+
+            .social-icons a {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 
@@ -127,25 +162,57 @@
         <section>
             <h2>Services and Prices</h2>
             <ul>
-                <li>In-person training and online coaching includes: unlimited access to the training app, custom-built workout programs, one or two in-person coaching sessions per week.</li>
-                <li>In-person training: $50 per session or $250 a month (2 in-person per week)</li>
-                <li>Online training: $200 a month</li>
-                <li>Nutrition coaching: includes meal planning and suggestions, coaching, and access to a nutrition tracking app, which will give you a library of workouts to choose from (no workout program, just a library).
-                    Nutrition coaching (only) $150 a month.</li>
-                <li>Behavioral Health coaching: includes an interview, behavioral modification, habit-building exercises, goal setting, and self-development programs.
-                    Health coaching (only) $125 a month.</li>
-                <li>As a training program add-on: $75 a month</li>
+                <li>A personalized program crafted just for you.</li>
+                <li>A nutrition plan and recipe ideas to help you achieve your transformation goals faster.</li>
+                <li>Quick access to a trainer rep for guidance with your program and nutrition plan.</li>
+                <li>24/7 access to me, your coach, for ongoing support.</li>
+                <li>I will motivate you and help shift your mindset about getting healthy and reaching your transformation goals. I’ll check in with you regularly and hold you accountable as you work towards your dreams.</li>
+            </ul>
+
+            <h3>Price Breakdown</h3>
+            <ul>
+                <li>Online workout plan: Includes 3 weekly workout sessions, a personalized program, and a nutrition plan. Additional days cost $99.</li>
+                <li>In-person sessions: $60 per session (1-1.5 hours).</li>
+                <li>3-month plan: $225 per month ($675 total).</li>
+                <li>6-month plan: $200 per month ($1,200 total).</li>
+                <li>12-month plan: $150 per month ($1,800 total).</li>
+                <li>Nutrition Stand-Alone Plan: $125 per month (3- or 6-month agreement).</li>
+                <li>Behavioral Coaching Plan: $125 per month (3-month agreement). Can be added to any other plan for $99.</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Reach out to me for inquiries or to schedule a session:</p>
-            <p>Email: add link here for Darvin's email</p>
-            <a href="tel:9419152536" style="font-size: 1.5em;">Call me at: 941-915-2536</a>
-            </a>
-            <a href="https://www.facebook.com/darvin.carter" style="font-size: 1.5em;">Personal Facebook</a>
-            <a href="https://www.facebook.com/profile.php?id=61555433211638" style="font-size: 1.5em;">AbleBody Facebook</a>
+
+            <div class="social-icons">
+                <!-- Email Icon -->
+                <a href="mailto:your-email@example.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <span class="social-label">Email</span>
+                <br><br>
+
+                <!-- Phone Icon -->
+                <a href="tel:9419152536" aria-label="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <span class="social-label">Call Me</span>
+                <br><br>
+
+                <!-- Personal Facebook Icon -->
+                <a href="https://www.facebook.com/darvin.carter" target="_blank" aria-label="Facebook Personal">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <span class="social-label">Personal</span>
+                <br><br>
+
+                <!-- Business Facebook Icon -->
+                <a href="https://www.facebook.com/profile.php?id=61555433211638" target="_blank" aria-label="Facebook Business">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <span class="social-label">Business</span>
+            </div>
         </section>
     </div>
 
